@@ -35,6 +35,17 @@ public class QuestionController {
         return questionService.getAllQuestions();
     }
 
+    @GetMapping("/result")
+    private String result(Model model) {
+
+        Result result = new Result();
+        result.setxValue(75);
+        result.setyValue(20);
+        model.addAttribute("result", result);
+
+        return "result";
+    }
+
     @GetMapping("/questions/{id}")
     private Question getQuestion(@PathVariable("id") int id) {
         return questionService.getQuestionById(id);
