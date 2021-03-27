@@ -34,6 +34,8 @@ public class QuestionController {
 
         Question question5 = questions.get(4);
         Question question6 = questions.get(5);
+        Question question7 = questions.get(6);
+        Question question8 = questions.get(7);
 
         model.addAttribute("question", question);
         model.addAttribute("question1", question1);
@@ -42,6 +44,8 @@ public class QuestionController {
         model.addAttribute("question4", question4);
         model.addAttribute("question5", question5);
         model.addAttribute("question6", question6);
+        model.addAttribute("question7", question7);
+        model.addAttribute("question8", question8);
         model.addAttribute("questions", questions);
 
 
