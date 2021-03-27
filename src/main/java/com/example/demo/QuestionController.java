@@ -21,10 +21,29 @@ public class QuestionController {
 //        model.addAttribute("question", question);
 
         List<Question> questions = questionService.getAllQuestions();
+        System.out.println(questions);
 
         Question question = questions.get(0);
+        Question question1 = questions.get(0);
+
+        Question question2 = questions.get(1);
+
+        Question question3 = questions.get(2);
+
+        Question question4 = questions.get(3);
+
+        Question question5 = questions.get(4);
+        Question question6 = questions.get(5);
+
         model.addAttribute("question", question);
-        questions.remove(0);
+        model.addAttribute("question1", question1);
+        model.addAttribute("question2", question2);
+        model.addAttribute("question3", question3);
+        model.addAttribute("question4", question4);
+        model.addAttribute("question5", question5);
+        model.addAttribute("question6", question6);
+        model.addAttribute("questions", questions);
+
 
         return "greeting";
 }
