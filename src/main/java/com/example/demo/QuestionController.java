@@ -54,12 +54,12 @@ public class QuestionController {
         return questionService.getAllQuestions();
     }
 
-    @GetMapping("/result")
-    private String result(Model model) {
+    @GetMapping("/result/{x}/{y}")
+    private String result(@PathVariable("x") int x, @PathVariable("y") int y, Model model) {
 
         Result result = new Result();
-        result.setxValue(75);
-        result.setyValue(20);
+        result.setxValue(x);
+        result.setyValue(y);
         model.addAttribute("result", result);
 
         return "result";
